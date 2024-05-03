@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+<body style="background-color:hsl(180, 20%, 50%);">
+
+<h1 style="text-align: center">Media Player Button</h1>
+<p style="text-align: center">Local Network Media Control</p>
+
+<!-- Volume Control -->
+<div style="margin-left: 10%; margin-right: 10%; text-align: center;">
+
+    <!-- Refresh button -->
+    <form action="/media" style="width: 25%; float: left;">
+        <input type="image" src="assets/refresh.png" alt="Submit Form" width="64" height="64">
+    </form>
+    
+    <!-- Volume Mute Button -->
+    <form action="/media" style="width: 25%; float: left">
+        <input type="hidden" name="press" value="volume_mute">
+        <input type="image" src="assets/volume-mute.png" alt="Submit Form" width="64" height="64">
+    </form>
+    
+    <!-- Volume Down Button -->
+    <form action="/media" style="width: 25%; float: left">
+        <input type="hidden" name="press" value="volume_down">
+        <input type="image" src="assets/volume-down.png" alt="Submit Form" width="64" height="64">
+    </form>
+    
+    <!-- Volume Up Button -->
+    <form action="/media" style="width: 25%; float: left">
+        <input type="hidden" name="press" value="volume_up">
+        <input type="image" src="assets/volume-up.png" width="64" height="64" alt="Submit Form" >
+    </form>
+</div>
+
+<!-- Media Button -->
+<div style="margin-left: 10%; margin-right: 10%; margin-bottom: 20%; text-align: center;">
+
+    <!-- Previous Track Button -->
+    <form action="/media" style="width: 25%; float: left;">
+        <input type="hidden" name="press" value="previous_track">
+        <input type="image" src="assets/back.png" alt="Submit Form" width="64" height="64">
+    </form>
+    
+    <!-- Stop Button -->
+    <form action="/media" style="width: 25%; float: left">
+        <input type="hidden" name="press" value="stop_media">
+        <input type="image" src="assets/stop.png" alt="Submit Form" width="64" height="64">
+    </form>
+    
+    <!-- Pause/Play Button -->
+    <form action="/media" style="width: 25%; float: left">
+        <input type="hidden" name="press" value="play/pause_media">
+        <input type="image" src="assets/pause.png" alt="Submit Form" width="64" height="64">
+    </form>
+    
+    <!-- Next Track Button -->
+    <form action="/media" style="width: 25%; float: left">
+        <input type="hidden" name="press" value="next_track">
+        <input type="image" src="assets/next.png" width="64" height="64" alt="Submit Form" >
+    </form>
+</div>
+
+</body>
+</html>

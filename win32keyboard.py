@@ -4,6 +4,7 @@ https://gist.github.com/chriskiehl/2906125
 '''
 
 import win32api
+import win32.lib.win32con as win32con
 import time
 
 class Keyboard():
@@ -127,7 +128,7 @@ class Keyboard():
             'browser_favorites':0xAB,
             'browser_start_and_home':0xAC,
             'volume_mute':0xAD,
-            'volume_Down':0xAE,
+            'volume_down':0xAE,
             'volume_up':0xAF,
             'next_track':0xB0,
             'previous_track':0xB1,
