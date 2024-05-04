@@ -1,0 +1,9 @@
+{
+    "icons": [
+        {
+            "src": "/assets/play.png",
+            "sizes": "any",
+            "type": "image/png"
+        }
+    ]
+}

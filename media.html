@@ -1,63 +1,73 @@
 <!DOCTYPE html>
 <html>
+
+<head>
+    <title>Web Media Control</title>
+    <link rel="icon" href="/assets/play.png" type="image/x-icon">
+    <link rel="manifest" href="/assets/site.webmanifest" type="image/x-icon">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="mobile-web-app-capable" content="yes">
+    <script>
+        function press(action){
+            // Get request parameters
+            const url = '/media?press=' + action;
+
+            // Send the request
+            fetch(url);
+        }
+    </script>
+</head>
+
+
 <body style="background-color:hsl(180, 20%, 50%);">
 
-<h1 style="text-align: center">Media Player Button</h1>
-<p style="text-align: center">Local Network Media Control</p>
+<div style="display: flex; flex-wrap: wrap; justify-content: space-evenly; width: 100%; display: block; margin-top: 0%">
+    <!-- Title -->
+    <div>
+        <h1 style="text-align: center">Media Player Button</h1>
+    </div>
+    <!-- Volume Control -->
+    <div style="display: flex ; justify-content: space-evenly; flex-direction: row; padding: 20px;">
+        
+        <!-- Volume Mute Button -->
+        <button onclick="press('volume_mute')" style="background-color: transparent; border: none;">
+            <img type="image/png" src="assets/volume-mute.png" alt="Transparent Image" width="64" height="64">
+        </button>
+        
+        <!-- Volume Down Button -->
+        <button onclick="press('volume_down')" style="background-color: transparent; border: none;">
+            <img type="image/png" src="assets/volume-down.png" alt="Transparent Image" width="64" height="64">
+        </button>
+        
+        <!-- Volume Up Button -->
+        <button onclick="press('volume_up')" style="background-color: transparent; border: none;">
+            <img type="image/png" src="assets/volume-up.png" alt="Transparent Image" width="64" height="64">
+        </button>
+    </div>
 
-<!-- Volume Control -->
-<div style="margin-left: 10%; margin-right: 10%; text-align: center;">
+    <!-- Media Button -->
+    <div style="display: flex; justify-content: space-evenly; padding: 20px; margin-top: 20px;">
 
-    <!-- Refresh button -->
-    <form action="/media" style="width: 25%; float: left;">
-        <input type="image" src="assets/refresh.png" alt="Submit Form" width="64" height="64">
-    </form>
-    
-    <!-- Volume Mute Button -->
-    <form action="/media" style="width: 25%; float: left">
-        <input type="hidden" name="press" value="volume_mute">
-        <input type="image" src="assets/volume-mute.png" alt="Submit Form" width="64" height="64">
-    </form>
-    
-    <!-- Volume Down Button -->
-    <form action="/media" style="width: 25%; float: left">
-        <input type="hidden" name="press" value="volume_down">
-        <input type="image" src="assets/volume-down.png" alt="Submit Form" width="64" height="64">
-    </form>
-    
-    <!-- Volume Up Button -->
-    <form action="/media" style="width: 25%; float: left">
-        <input type="hidden" name="press" value="volume_up">
-        <input type="image" src="assets/volume-up.png" width="64" height="64" alt="Submit Form" >
-    </form>
-</div>
-
-<!-- Media Button -->
-<div style="margin-left: 10%; margin-right: 10%; margin-bottom: 20%; text-align: center;">
-
-    <!-- Previous Track Button -->
-    <form action="/media" style="width: 25%; float: left;">
-        <input type="hidden" name="press" value="previous_track">
-        <input type="image" src="assets/back.png" alt="Submit Form" width="64" height="64">
-    </form>
-    
-    <!-- Stop Button -->
-    <form action="/media" style="width: 25%; float: left">
-        <input type="hidden" name="press" value="stop_media">
-        <input type="image" src="assets/stop.png" alt="Submit Form" width="64" height="64">
-    </form>
-    
-    <!-- Pause/Play Button -->
-    <form action="/media" style="width: 25%; float: left">
-        <input type="hidden" name="press" value="play/pause_media">
-        <input type="image" src="assets/pause.png" alt="Submit Form" width="64" height="64">
-    </form>
-    
-    <!-- Next Track Button -->
-    <form action="/media" style="width: 25%; float: left">
-        <input type="hidden" name="press" value="next_track">
-        <input type="image" src="assets/next.png" width="64" height="64" alt="Submit Form" >
-    </form>
+        <!-- Previous Track Button -->
+        <button onclick="press('previous_track')" style="background-color: transparent; border: none;">
+            <img type="image/png" src="assets/back.png" alt="Transparent Image" width="64" height="64">
+        </button>
+        
+        <!-- Stop Button -->
+        <button onclick="press('stop_media')" style="background-color: transparent; border: none;">
+            <img type="image/png" src="assets/stop.png" alt="Transparent Image" width="64" height="64">
+        </button>
+        
+        <!-- Pause/Play Button -->
+        <button onclick="press('play/pause_media')" style="background-color: transparent; border: none;">
+            <img type="image/png" src="assets/pause.png" alt="Transparent Image" width="64" height="64">
+        </button>
+        
+        <!-- Next Track Button -->
+        <button onclick="press('next_track')" style="background-color: transparent; border: none;">
+            <img type="image/png" src="assets/next.png" alt="Transparent Image" width="64" height="64">
+        </button>
+    </div>
 </div>
 
 </body>
